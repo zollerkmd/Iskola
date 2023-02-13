@@ -1,0 +1,10 @@
+1;Nagy Huba;info;90
+2;Kiss Miska;festészet;72
+3;Közepes Ede;matek;63
+4;Teszt Elek;kerteszet;92
+5;Kertész Edvárd;virágkötészet;76
+6;Büki Zoltán;matek;89
+7;Alma János;info;76
+8;Béla Géza;matek;51
+9;Kiss Gizi;kerteszet;32
+10;Nagy János;info;67

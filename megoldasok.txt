@@ -1,0 +1,42 @@
+1.,
+CREATE DATABASE Iskola;
+USE Iskola;
+
+CREATE TABLE Versenyzok (
+	id int NOT NULL AUTO_INCREMENT,
+	nev varchar(255),
+	tantargy varchar(255),
+	szazalek int,
+	PRIMARY KEY (id)
+);
+
+INSERT INTO Versenyzok (nev, tantargy, szazalek) VALUES ('Nagy Huba', 'info', '90');
+INSERT INTO Versenyzok (nev, tantargy, szazalek) VALUES ('Kiss Miska', 'festészet', '72');
+INSERT INTO Versenyzok (nev, tantargy, szazalek) VALUES ('Közepes Ede', 'matek', '63');
+INSERT INTO Versenyzok (nev, tantargy, szazalek) VALUES ('Teszt Elek', 'kerteszet', '92');
+INSERT INTO Versenyzok (nev, tantargy, szazalek) VALUES ('Kertész Edvárd', 'virágkötészet', '76');
+
+3.,
+SELECT * FROM Versenyzok WHERE tantargy = 'info';
+
+4.,
+UPDATE Versenyzok SET tantargy='erdészet' WHERE nev = 'Teszt Elek';
+
+5.,
+SELECT AVG(szazalek) AS 'atlag' FROM Versenyzok;
+
+6.,
+SELECT * FROM Versenyzok WHERE szazalek > '90' ORDER BY nev DESC;
+SELECT * FROM Versenyzok WHERE szazalek > (SELECT MAX(szazalek) FROM Versenyzok WHERE tantargy = 'info') ORDER BY nev DESC;
+
+7.,
+SELECT tantargy, COUNT(id) AS 'darab' FROM Versenyzok GROUP BY darab;
+
+8.,
+Külön táblában
+
+9.,
+Külön táblában
+
+10.,
+DELETE FROM Versenyzok WHERE nev = 'Közepes Ede';
